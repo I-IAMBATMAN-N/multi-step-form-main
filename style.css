@@ -37,6 +37,8 @@ The designs were created to the following widths:
 - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu)
 - Weights: 400, 500, 700
 */
+
+/* GENERAL */
 @font-face {
   font-family: "Ubuntu";
   src: url(assets/fonts/Ubuntu-Regular.ttf);
@@ -69,7 +71,17 @@ html {
 }
 .form-heading-1 {
   font-size: 2.4rem;
+}
+.form-heading-1,
+.heading-3 {
   color: hsl(213, 96%, 18%);
+}
+.heading-3 {
+  font-size: 1.6rem;
+}
+.choice-description {
+  font-size: 1.2rem;
+  color: hsl(231, 11%, 63%);
 }
 .form-text {
   font-size: 2rem;
@@ -130,7 +142,7 @@ html {
   flex-direction: column;
   gap: 2.4rem;
   background-color: hsl(0, 0%, 100%);
-  padding: 2.4rem 1.6rem;
+  padding: 3.6rem 2.8rem;
   border-radius: 7px;
   position: absolute;
   top: 0;
@@ -142,6 +154,7 @@ html {
   flex-direction: column;
   gap: 1.6rem;
 }
+/* FIRST PAGE */
 .inputs-container {
   display: flex;
   flex-direction: column;
@@ -171,16 +184,94 @@ html {
   width: 100%;
   height: 8%;
   padding: 2.4rem 2rem;
+  overflow-x: hidden;
+}
+.form-footer--container {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 .change-step {
   display: inline-block;
-  color: hsl(0, 0%, 100%);
-  background-color: hsl(213, 96%, 18%);
+  color: hsl(231, 11%, 63%);
   padding: 1.2rem 1.6rem;
   text-decoration: none;
   font-size: 2rem;
-  margin-left: auto;
   border-radius: 3px;
+}
+.change-step:last-child {
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(213, 96%, 18%);
+  margin-left: auto;
+}
+/* SECOND PAGE */
+.choices-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.choice-container {
+  display: flex;
+  gap: 1.2rem;
+  width: 100%;
+  box-shadow: inset 0 0 0 1px hsl(229, 24%, 87%);
+  padding: 1.6rem;
+  align-items: center;
+  border-radius: 7px;
+}
+.choice-container.active {
+  box-shadow: inset 0 0 0 1px hsl(213, 96%, 18%);
+  background-color: hsl(217, 100%, 97%);
+}
+.choice-description-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+.choice-img {
+  width: 4rem;
+}
+.plan-switch-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.2rem;
+  padding: 1.4rem;
+  margin-top: 1.2rem;
+  background-color: hsl(217, 100%, 97%);
+  border-radius: 7px;
+}
+.plan-switch {
+  display: flex;
+  background-color: hsl(213, 96%, 18%);
+  width: 3.2rem;
+  border-radius: 10px;
+  position: relative;
+  padding: 0.4rem;
+}
+.plan-switch input {
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 100%;
+  opacity: 0%;
+}
+.plan-switch--button {
+  display: inline-block;
+  height: 1rem;
+  aspect-ratio: 1/1;
+  background-color: white;
+  border-radius: 50%;
+}
+.plan-switch input[type="checkbox"]:checked + .plan-switch--button {
+  margin-left: auto;
+}
+.plan-switch-period {
+  font-size: 1.4rem;
+  color: hsl(231, 11%, 63%);
+}
+.plan-switch-period.active {
+  color: hsl(213, 96%, 18%);
 }
