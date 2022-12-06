@@ -37,6 +37,21 @@ The designs were created to the following widths:
 - Family: [Ubuntu](https://fonts.google.com/specimen/Ubuntu)
 - Weights: 400, 500, 700
 */
+@font-face {
+  font-family: "Ubuntu";
+  src: url(assets/fonts/Ubuntu-Regular.ttf);
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(assets/fonts/Ubuntu-Medium.ttf);
+  font-weight: 500;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url(assets/fonts/Ubuntu-Bold.ttf);
+  font-weight: 700;
+}
 * {
   padding: 0;
   margin: 0;
@@ -44,15 +59,27 @@ The designs were created to the following widths:
 }
 html {
   font-size: 50%;
+  font-family: "Ubuntu", sans-serif;
 }
 .container {
   width: 100%;
   max-width: 900px;
   margin: 0 auto;
+  min-height: 100vh;
+}
+.form-heading-1 {
+  font-size: 2.4rem;
+  color: hsl(213, 96%, 18%);
+}
+.form-text {
+  font-size: 2rem;
+  color: hsl(231, 11%, 63%);
+  line-height: 1.2;
 }
 .form {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 .form-steps {
   flex: 0 0 150px;
@@ -64,25 +91,96 @@ html {
 .form-nav--list {
   display: flex;
   list-style: none;
-  gap: 1.2rem;
+  gap: 2rem;
   align-items: center;
   justify-content: center;
 }
 .form-nav--link {
+  text-decoration: none;
+}
+.form-nav--link--number {
+  display: inline-block;
+  width: 3.6rem;
+  height: 3.6rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;
-  width: 2.4rem;
-  height: 2.4rem;
+  box-shadow: inset 0 0 0 0.1rem hsl(0, 0%, 100%);
+  font-size: 1.6rem;
   border-radius: 50%;
 }
 .form-nav--link:link,
 .form-nav--link:visited {
   color: hsl(0, 0%, 100%);
-  box-shadow: inset 0 0 0 0.1rem hsl(0, 0%, 100%);
 }
-.form-nav--link.active {
+.form-nav--link.active .form-nav--link--number {
   background-color: hsl(206, 94%, 87%);
   color: hsl(213, 96%, 18%);
+}
+.form-info-section {
+  flex: 1 0;
+  background-color: hsl(217, 100%, 97%);
+  padding: 2.4rem 1.2rem;
+  position: relative;
+}
+.form-info--content-container {
+  width: 90%;
+  min-height: fit-content;
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+  background-color: hsl(0, 0%, 100%);
+  padding: 2.4rem 1.6rem;
+  border-radius: 7px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -55px);
+}
+.form-info--content-container header {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+}
+.inputs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2.4rem;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.input-container label {
+  color: hsl(213, 96%, 18%);
+  font-size: 1.4rem;
+}
+.input {
+  padding: 1.2rem 1.6rem;
+  font-weight: 500;
+  border: none;
+  border: solid 1px hsl(229, 24%, 87%);
+  border-radius: 4px;
+}
+.input:focus {
+  outline: solid 2px hsl(228, 100%, 84%);
+}
+.form-footer {
+  background-color: hsl(0, 0%, 100%);
+  width: 100%;
+  height: 8%;
+  padding: 2.4rem 2rem;
+  display: flex;
+  justify-content: space-between;
+}
+.change-step {
+  display: inline-block;
+  color: hsl(0, 0%, 100%);
+  background-color: hsl(213, 96%, 18%);
+  padding: 1.2rem 1.6rem;
+  text-decoration: none;
+  font-size: 2rem;
+  margin-left: auto;
+  border-radius: 3px;
 }
