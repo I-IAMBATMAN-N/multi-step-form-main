@@ -84,6 +84,9 @@ html {
   font-size: 1.2rem;
   color: hsl(231, 11%, 63%);
 }
+.choice-description span:last-child {
+  display: none;
+}
 .form-text {
   font-size: 2rem;
   color: hsl(231, 11%, 63%);
