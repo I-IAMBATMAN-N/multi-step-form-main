@@ -63,6 +63,9 @@ html {
   font-size: 50%;
   font-family: "Ubuntu", sans-serif;
 }
+.d-none {
+  display: none;
+}
 .container {
   width: 100%;
   max-width: 900px;
@@ -83,9 +86,6 @@ html {
 .choice-description {
   font-size: 1.2rem;
   color: hsl(231, 11%, 63%);
-}
-.choice-description span:last-child {
-  display: none;
 }
 .form-text {
   font-size: 2rem;
@@ -132,6 +132,7 @@ html {
 .form-nav--link.active .form-nav--link--number {
   background-color: hsl(206, 94%, 87%);
   color: hsl(213, 96%, 18%);
+  box-shadow: none;
 }
 .form-info-section {
   flex: 1 0;
@@ -287,7 +288,7 @@ html {
 .price span:last-child {
   display: none;
 }
-.input-container {
+.step-3 .input-container {
   display: flex;
   flex-direction: row;
   align-items: center;

@@ -12,7 +12,7 @@
       href="./images/favicon-32x32.png"
     />
     <link rel="stylesheet" href="style.css" />
-
+    <script defer src="script.js"></script>
     <title>Frontend Mentor | Multi-step form</title>
 
     <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
@@ -111,7 +111,7 @@
               </div>
             </div>
           </section> -->
-          <!-- <section class="form-info--content-container step-2">
+          <section class="form-info--content-container step-2">
             <header>
               <h2 class="form-heading-1">Select your plan</h2>
               <p class="form-text">
@@ -127,7 +127,9 @@
                 />
                 <div class="choice-description-container">
                   <h3 class="heading-3">Arcade</h3>
-                  <p class="choice-description"><span>$9/mo</span><span>$90/yr</span></p>
+                  <p class="choice-description">
+                    <span>$9/mo</span><span class="d-none">$90/yr</span>
+                  </p>
                 </div>
               </div>
               <div class="choice-container">
@@ -138,7 +140,9 @@
                 />
                 <div class="choice-description-container">
                   <h3 class="heading-3">Advanced</h3>
-                  <p class="choice-description"><span>$12/mo</span><span>$120/yr</span></p>
+                  <p class="choice-description">
+                    <span>$12/mo</span><span class="d-none">$120/yr</span>
+                  </p>
                 </div>
               </div>
               <div class="choice-container">
@@ -149,20 +153,22 @@
                 />
                 <div class="choice-description-container">
                   <h3 class="heading-3">Pro</h3>
-                  <p class="choice-description"><span>$15/mo</span><span>$150/yr</span></p>
+                  <p class="choice-description">
+                    <span>$15/mo</span><span class="d-none">$150/yr</span>
+                  </p>
                 </div>
               </div>
               <div class="plan-switch-container">
                 <p class="plan-switch-period active">Monthly</p>
                 <span class="plan-switch">
-                  <input type="checkbox" />
+                  <input type="checkbox" class="plan-checkbox" />
                   <span class="plan-switch--button"></span>
                 </span>
                 <p class="plan-switch-period">Yearly</p>
               </div>
             </div>
-          </section> -->
-          <section class="form-info--content-container step-3">
+          </section>
+          <!-- <section class="form-info--content-container step-3">
             <header>
               <h2 class="form-heading-1">Pick add-ons</h2>
               <p class="form-text">
@@ -210,7 +216,7 @@
                 <p class="price"><span>+$2/mo</span><span>+$20/mo</span></p>
               </div>
             </div>
-          </section>
+          </section> -->
         </article>
         <footer class="form-footer">
           <div class="form-footer--container">
