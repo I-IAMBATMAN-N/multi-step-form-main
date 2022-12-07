@@ -291,9 +291,6 @@ html {
   font-size: 1.4rem;
   color: hsl(243, 100%, 62%);
 }
-.price span:last-child {
-  display: none;
-}
 .step-3 .input-container {
   display: flex;
   flex-direction: row;
