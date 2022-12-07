@@ -224,6 +224,9 @@ html {
   align-items: center;
   border-radius: 0.7rem;
 }
+.choice-container:hover {
+  cursor: pointer;
+}
 .choice-container.active {
   box-shadow: inset 0 0 0 1px hsl(213, 96%, 18%);
   background-color: hsl(217, 100%, 97%);
@@ -254,7 +257,7 @@ html {
   position: relative;
   padding: 0.4rem;
 }
-.plan-switch input {
+.plan-switch input[type="checkbox"] {
   display: inline-block;
   position: absolute;
   top: 0;
@@ -262,6 +265,9 @@ html {
   transform: translate(-50%, 0);
   width: 100%;
   opacity: 0%;
+}
+.plan-switch input[type="checkbox"]:hover {
+  cursor: pointer;
 }
 .plan-switch--button {
   display: inline-block;
