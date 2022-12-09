@@ -20,6 +20,7 @@
     flex-direction: row;
     min-height: 50vh;
     min-width: 60vw;
+    background-color: hsl(0, 0%, 100%);
     /* padding: 1.2rem; */
   }
   .form-info-section {
