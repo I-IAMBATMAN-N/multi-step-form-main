@@ -371,3 +371,57 @@ changeStepButtons.forEach((changeStepButton) => {
     }
   });
 });
+
+//Step 4
+//DISPLAY FORM INFO
+const step4Heading = document.querySelector(".step-4 .heading-3");
+const planPrice = document.querySelector(".step-4 .plan-price");
+const addOnsContainer = document.querySelector(".step-4 .add-ons-container");
+addOnsContainer.innerHTM = ``;
+
+function displayFormResults() {
+  function displayTotal() {
+    document.querySelector(
+      ".total-price"
+    ).innerText = `+$${formResults.getTotal()}/${yearly ? "yr" : "mo"}`;
+    document.querySelector(".total-period").innerText = yearly
+      ? "(per year)"
+      : "(per month)";
+  }
+  //
+  console.log("formResults", formResults);
+  step4Heading.innerText =
+    formResults.plan.name + `(${formResults.yearly ? "Yearly" : "Monthly"})`;
+  planPrice.innerText = formResults.plan.price;
+
+  addOnsContainer.innerHTML = ``;
+  if (formResults.addOns.length === 0) {
+    displayTotal();
+    return;
+  } else if (formResults.addOns.length === 1) {
+    addOnsContainer.innerHTML += `
+    <div class="add-on">
+        <p class="form-text">${formResults.addOns[0].name}</p>
+        <span class="plan-price">${formResults.addOns[0].price}</span>
+    </div>
+    `;
+    displayTotal();
+  } else if (formResults.addOns.length > 1) {
+    formResults.addOns.forEach((addOn) => {
+      addOnsContainer.innerHTML += `
+        <div class="add-on">
+            <p class="form-text">${addOn.name}</p>
+            <span class="plan-price">${addOn.price}</span>
+        </div>
+        `;
+    });
+    displayTotal();
+  }
+}
+//Go back to step 2 on plan change btn click
+document
+  .querySelector(".change-plan-link")
+  .addEventListener("click", function () {
+    index = 2;
+    displayStep(index);
+  });
