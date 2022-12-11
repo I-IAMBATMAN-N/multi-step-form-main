@@ -132,7 +132,7 @@ html {
   font-size: 1.6rem;
   border-radius: 50%;
 }
-.form-nav--link--number:hover {
+.form-nav--link:hover {
   cursor: default;
 }
 .step-text-container {
