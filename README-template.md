@@ -19,10 +19,10 @@ This is a solution to the [Multi-step form challenge on Frontend Mentor](https:/
 
 Users should be able to:
 
-✔ - Complete each step of the sequence 🎉
-✔ - See a summary of their selections on the final step and confirm their order 🎉
-✔ - View the optimal layout for the interface depending on their device's screen size 🎉
-✔ - See hover and focus states for all interactive elements on the page 🎉
+🎉✔DONE✔🎉 - Complete each step of the sequence
+🎉✔DONE✔🎉 - See a summary of their selections on the final step and confirm their order
+🎉✔DONE✔🎉 - View the optimal layout for the interface depending on their device's screen size
+🎉✔DONE✔🎉 - See hover and focus states for all interactive elements on the page
 
 ### Screenshot
 
@@ -30,8 +30,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/I-IAMBATMAN-N/multi-step-form-main)
+- Live Site URL: [Add live site URL here](https://multistep-form-fm.netlify.app)
 
 ## My process
 
@@ -48,6 +48,12 @@ started with JS functions in order to gather informations from all form inputs w
 - CSS custom propertiesForm
 - Flexbox
 - JS
+
+### Useful resources
+
+- [1 Google](https://www.google.com)
+- [2 StackOverflow](https://stackoverflow.com/)
+- [3 MDC Docs](https://developer.mozilla.org)
 
 ### What I learned
 
