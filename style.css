@@ -198,6 +198,9 @@ html {
 .input:focus {
   outline: solid 2px hsl(228, 100%, 84%);
 }
+.input:invalid {
+  outline: solid 2px hsl(0, 100%, 71%);
+}
 .form-footer {
   background-color: hsl(0, 0%, 100%);
   width: 100%;

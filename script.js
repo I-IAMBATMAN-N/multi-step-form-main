@@ -168,9 +168,19 @@ let index = 1;
 const changeStepButtons = document.querySelectorAll(".change-step");
 
 changeStepButtons.forEach((button) => {
+  function checkInputs() {
+    inputs.forEach((input) => {
+      if (
+        input.innerText.length >= Number(inputs[0].getAttribute("minlength"))
+      ) {
+        return true;
+      } else return false;
+    });
+  }
+
   button.addEventListener("click", function (event) {
     if (event.target.innerText.toLowerCase() === "next step") {
-      console.log(index);
+      // console.log(index);
       if (index === 4) {
         index = 4;
       } else {
@@ -183,7 +193,15 @@ changeStepButtons.forEach((button) => {
         index--;
       }
       console.log(index);
-    } else if (event.target.innerText.toLowerCase() === "confirm") {
+    } else if (
+      event.target.innerText.toLowerCase() === "confirm" &&
+      !checkInputs()
+    ) {
+      alert("Fill all inputs firs");
+    } else if (
+      event.target.innerText.toLowerCase() === "confirm" &&
+      checkInputs()
+    ) {
       index = 5;
     }
     displayStep(index);
@@ -273,6 +291,7 @@ changeStepButtons.forEach((changeStepButton) => {
   changeStepButton.addEventListener("click", function (event) {
     if (index === 4 && event.target.innerText.toLowerCase() === "confirm") {
       console.log("SUBMITED");
+      // console.log("atr", Number(inputs[0].getAttribute("minlength")));
       for (let i = 0; i < inputs.length; i++) {
         // console.log(inputs[i].value);
         credentialsArr[i] = inputs[i].value;
