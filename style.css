@@ -62,8 +62,8 @@ The designs were created to the following widths:
 html {
   font-size: 50%;
   font-family: "Ubuntu", sans-serif;
+  background-color: hsl(217, 100%, 97%);
 }
-
 .d-none {
   display: none !important;
 }
@@ -103,6 +103,8 @@ html {
   min-height: 100vh;
   border-radius: 10px;
   overflow: hidden;
+
+  background-color: hsl(217, 100%, 97%);
 }
 .form-steps {
   flex: 0 0 150px;
@@ -149,7 +151,6 @@ html {
 }
 .form-info-section {
   flex: 1 0;
-  background-color: hsl(217, 100%, 97%);
   padding: 2.4rem 1.2rem;
   position: relative;
 }

@@ -197,7 +197,7 @@ changeStepButtons.forEach((button) => {
       event.target.innerText.toLowerCase() === "confirm" &&
       !checkInputs()
     ) {
-      alert("Fill all inputs firs");
+      alert("Fill all inputs first");
     } else if (
       event.target.innerText.toLowerCase() === "confirm" &&
       checkInputs()
