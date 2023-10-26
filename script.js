@@ -279,13 +279,13 @@ class FormResults {
 }
 
 const inputs = document.querySelectorAll(".input");
+
 let namee;
 let email;
 let phoneNumber;
 const credentialsArr = [namee, email, phoneNumber];
 const plan = {};
 let formResults;
-
 //Gather all form information on 3rd Next Step button click
 changeStepButtons.forEach((changeStepButton) => {
   changeStepButton.addEventListener("click", function (event) {
@@ -444,3 +444,19 @@ document
     index = 2;
     displayStep(index);
   });
+
+const regExpNum = /[0-9]/;
+
+inputs.forEach((input, index) => {
+  const inputTitles = ["Name", "Email Address", "Phone number"];
+  //
+  if (index < inputs.length - 1) {
+    input.addEventListener("input", function (e) {
+      if (regExpNum.test(e.target.value)) {
+        alert(`No numbers in:\n${inputTitles[index]}`);
+
+        input.value = input.value.slice(0, -1);
+      }
+    });
+  }
+});
