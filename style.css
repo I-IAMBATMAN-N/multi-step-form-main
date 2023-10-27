@@ -105,6 +105,8 @@ html {
   overflow: hidden;
 
   background-color: hsl(217, 100%, 97%);
+
+  padding: 1.2rem;
 }
 .form-steps {
   flex: 0 0 150px;
@@ -112,6 +114,8 @@ html {
   background-repeat: no-repeat;
   background-size: cover;
   padding: 4.8rem;
+
+  border-radius: 10px;
 }
 .form-nav--list {
   display: flex;
