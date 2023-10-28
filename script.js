@@ -37,7 +37,7 @@ function displayStep(index) {
   //
   formNavLinks.forEach((navLink) => {
     navLink.classList.remove("active");
-    console.log("navLink", navLink.children[0].innerText);
+    // console.log("navLink", navLink.children[0].innerText);
     if (Number(navLink.children[0].innerText) === index) {
       navLink.classList.add("active");
     }
@@ -99,7 +99,7 @@ if (document.querySelector(".step-2")) {
         }
       });
     }
-    console.log("yearly", yearly);
+    // console.log("yearly", yearly);
     priceSpans.forEach((priceSpan) => {
       priceSpan.classList.toggle("d-none");
     });
@@ -159,7 +159,7 @@ step3ChoiceContainersInputs.forEach((input) => {
   input.addEventListener("click", function (e) {
     checkChecks(input);
   });
-  console.log(input.checked);
+  // console.log(input.checked);
 });
 
 // console.log(formInfoContainer);
@@ -192,7 +192,7 @@ changeStepButtons.forEach((button) => {
       } else {
         index--;
       }
-      console.log(index);
+      // console.log(index);
     } else if (
       event.target.innerText.toLowerCase() === "confirm" &&
       !checkInputs()
@@ -227,7 +227,7 @@ class FormResults {
     this.price = 0;
     //PLAN
     if (yearly === false) {
-      console.log("plan-price", Number(this.plan.price.slice(1, 3)));
+      // console.log("plan-price", Number(this.plan.price.slice(1, 3)));
       if (plan.name.toLowerCase() === "arcade") {
         this.price += Number(this.plan.price.slice(1, 2));
       } else if (plan.name.toLowerCase() !== "arcade") {
@@ -235,7 +235,7 @@ class FormResults {
       }
       //   console.log("this price", this.price);
     } else if (yearly === true) {
-      console.log("yearly true");
+      // console.log("yearly true");
       if (plan.name.toLowerCase() === "arcade") {
         this.price += Number(this.plan.price.slice(1, 3));
       } else if (plan.name.toLowerCase() !== "arcade") {
@@ -244,19 +244,19 @@ class FormResults {
       //   console.log("plan-price", Number(this.plan.price.slice(1, 4)));
       //   console.log("this price", this.price);
     }
-    console.log("price after main plan", this.price);
+    // console.log("price after main plan", this.price);
     //ADD ONS
     if (this.addOns.length === 0) {
       return this.price;
     }
     if (this.addOns.length <= 1) {
-      console.log("yearly", yearly);
+      // console.log("yearly", yearly);
       if (yearly === false) {
-        console.log("monthly price", Number(this.addOns[0].price.slice(2, 3)));
+        // console.log("monthly price", Number(this.addOns[0].price.slice(2, 3)));
         // console.log("price", this.price);
         this.price += Number(this.addOns[0].price.slice(2, 3));
       } else if (yearly === true) {
-        console.log("yearly price", Number(this.addOns[0].price.slice(2, 4)));
+        // console.log("yearly price", Number(this.addOns[0].price.slice(2, 4)));
         // console.log("price", this.price);
         this.price += Number(this.addOns[0].price.slice(2, 4));
       }
@@ -273,7 +273,7 @@ class FormResults {
         }
       });
     }
-    console.log("TOTAAAAL", this.price);
+    // console.log("TOTAAAAL", this.price);
     return this.price;
   }
 }
@@ -290,7 +290,7 @@ let formResults;
 changeStepButtons.forEach((changeStepButton) => {
   changeStepButton.addEventListener("click", function (event) {
     if (index === 4 && event.target.innerText.toLowerCase() === "confirm") {
-      console.log("SUBMITED");
+      // console.log("SUBMITED");
       // console.log("atr", Number(inputs[0].getAttribute("minlength")));
       for (let i = 0; i < inputs.length; i++) {
         // console.log(inputs[i].value);
@@ -342,14 +342,14 @@ changeStepButtons.forEach((changeStepButton) => {
                         .trim()
                         .slice(0, 2) + child.innerText;
 
-                    console.log("arcade", plan.price);
+                    // console.log("arcade", plan.price);
                   } else if (plan.name.toLowerCase() !== "arcade") {
                     plan.price =
                       container.children[1].children[1].innerText
                         .trim()
                         .slice(0, 3) + child.innerText;
 
-                    console.log("noarcaade", plan.price);
+                    // console.log("noarcaade", plan.price);
                   }
                 }
               }
@@ -408,7 +408,7 @@ function displayFormResults() {
       : "(per month)";
   }
   //
-  console.log("formResults", formResults);
+  // console.log("formResults", formResults);
   step4Heading.innerText =
     formResults.plan.name + `(${formResults.yearly ? "Yearly" : "Monthly"})`;
   planPrice.innerText = formResults.plan.price;
