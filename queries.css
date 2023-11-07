@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 @media (min-width: 900px) {
   html {
     font-size: 62.5%;
@@ -10,39 +17,73 @@
       justify-content: center;
     } */
   .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
   .form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
     flex-direction: row;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     min-height: 0vh;
     background-color: hsl(0, 0%, 100%);
   }
   .form-info-section {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 0;
     flex: 1 0;
     /* height: 100%; */
     background-color: hsl(0, 0%, 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
   }
   .form-info--content-container {
     position: static;
+    -webkit-transform: translate(0%, 0%);
+    -ms-transform: translate(0%, 0%);
     transform: translate(0%, 0%);
     width: 100%;
     height: 100%;
   }
   .form-nav--link {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
     text-transform: uppercase;
     gap: 1.6rem;
   }
   .step-text-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
   }
   .form-nav--link--text {
@@ -54,20 +95,35 @@
     color: hsl(0, 0%, 100%);
   }
   .form-steps {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 27.4rem;
     flex: 0 0 27.4rem;
     height: 56.8rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: start;
+    -ms-flex-pack: start;
     justify-content: start;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
     background-image: url(assets/images/bg-sidebar-desktop.svg);
     padding: 3.2rem;
   }
   .form-nav--list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
+    -webkit-box-align: start;
+    -ms-flex-align: start;
     align-items: flex-start;
   }
   .form-footer {
     /* display: none; */
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
     position: static;
     padding: 0 2.8rem;
