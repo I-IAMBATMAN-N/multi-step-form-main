@@ -40,6 +40,7 @@
     height: -moz-fit-content;
     height: fit-content;
     min-height: 0vh;
+    min-width: 85.4rem;
     background-color: hsl(0, 0%, 100%);
   }
   .form-info-section {
