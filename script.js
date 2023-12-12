@@ -1,6 +1,5 @@
 "use strict";
 
-//
 //UX/UI
 // ********************************************************************
 // START UP
@@ -169,13 +168,19 @@ const changeStepButtons = document.querySelectorAll(".change-step");
 
 changeStepButtons.forEach((button) => {
   function checkInputs() {
+    let bool = true;
     inputs.forEach((input) => {
-      if (
-        input.innerText.length >= Number(inputs[0].getAttribute("minlength"))
-      ) {
-        return true;
-      } else return false;
+      //
+      // console.log(
+      //   input.innerText.length,
+      //   Number(input.getAttribute("minlength"))
+      // );
+      //
+      if (input.innerText.length < Number(input.getAttribute("minlength"))) {
+        bool = false;
+      }
     });
+    return bool;
   }
 
   button.addEventListener("click", function (event) {
@@ -195,12 +200,12 @@ changeStepButtons.forEach((button) => {
       // console.log(index);
     } else if (
       event.target.innerText.toLowerCase() === "confirm" &&
-      !checkInputs()
+      checkInputs() === true
     ) {
       alert("Fill all inputs first");
     } else if (
       event.target.innerText.toLowerCase() === "confirm" &&
-      checkInputs()
+      checkInputs() === false
     ) {
       index = 5;
     }
