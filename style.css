@@ -143,6 +143,9 @@ html {
 .form-nav--link {
   text-decoration: none;
 }
+.form-nav--link:hover {
+  cursor: default;
+}
 .form-nav--link--number {
   display: inline-block;
   width: 3.6rem;
@@ -161,8 +164,8 @@ html {
   font-size: 1.6rem;
   border-radius: 50%;
 }
-.form-nav--link:hover {
-  cursor: default;
+.form-nav--link--number:hover {
+  cursor: pointer;
 }
 .step-text-container {
   display: none;
@@ -261,7 +264,7 @@ html {
   width: 100%;
   padding: 2.4rem 2rem;
   position: absolute;
-  bottom: 0;
+  bottom: 30px;
   left: 0;
   right: 0;
 }
@@ -460,6 +463,7 @@ html {
   align-items: center;
 }
 .plan-container--text-container {
+  text-transform: capitalize;
 }
 .change-plan-link {
   display: inline-block;
